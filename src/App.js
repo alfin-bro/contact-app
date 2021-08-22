@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
-function App() {
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import ContactList from './pages/ContactList';
+import FormContact from './pages/FormContact';
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container py-4">
+      <Router>
+        <Route exact path='/' component={ContactList} />
+        <Route path='/add-contact' component={FormContact} />
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

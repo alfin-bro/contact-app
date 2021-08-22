@@ -1,0 +1,34 @@
+{
+  "contact": [
+    {
+      "id": 1,
+      "name": "Alfin Abdurrafi",
+      "email": "alfinrafi2@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Raka Ginting",
+      "email": "ginting@gmail.com"
+    },
+    {
+      "name": "Alfin Abdurrafi",
+      "email": "alfinrafi2@gmail.com",
+      "id": "ba166094-205f-4f7d-837d-82f29e705d0a"
+    },
+    {
+      "name": "Romi wesd",
+      "email": "romi@gmail.com",
+      "id": "d7c2c6ce-4e69-47c5-815d-53587170a07b"
+    },
+    {
+      "name": "Sinta mayana",
+      "email": "sinta@gmail.com",
+      "id": "0711e9b5-3efa-47c0-a970-96c3565ad609"
+    },
+    {
+      "name": "Joko saputra",
+      "email": "joko@gmail.com",
+      "id": "f5538ad6-1d2c-4709-9b89-4d4b43396a6a"
+    }
+  ]
+}
