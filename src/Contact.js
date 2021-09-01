@@ -11,6 +11,9 @@ import { v4 as uuidv4 } from 'uuid';
 const Contact = () => {
     const [contacts, setContacts] = useState([])
     const [isUpdate, setIsUpdate] = useState(false)
+    const [isRemove, setIsRemove] = useState(false)
+    const [id, setId] = useState([])
+
     const [updateNewContacts, setUpdateNewContacts] = useState({
         name: "",
         email: "",
@@ -22,7 +25,6 @@ const Contact = () => {
         await axios.get("http://localhost:3004/contact?_sort=id&_order=desc")
             .then(response => {
                 setContacts(response.data)
-                console.log(response.data);
             })
     }
 
@@ -37,10 +39,16 @@ const Contact = () => {
     }
 
     const handleContactRemove = (id) => {
-        axios.delete(`http://localhost:3004/contact/${id}`)
+        setIsRemove(true)
+        setId(id)
+    }
+
+    const sureRemove = (id) => {
+           axios.delete(`http://localhost:3004/contact/${id}`)
             .then(res => {
                 const newContactList = contacts.filter(contact => contact.id !== id)
                 setContacts(newContactList)
+                setIsRemove(false)
             })
     }
 
@@ -51,11 +59,11 @@ const Contact = () => {
 
 
     return (
-        <div className="container py-5">
+        <div className="container py-5 position-relative">
             <Router>
                 <Switch>
                     <Route exact path='/'>
-                        <ContactList contacts={contacts} setUpdateNewContacts={setUpdateNewContacts} remove={handleContactRemove} setIsUpdate={setIsUpdate} />
+                        <ContactList contacts={contacts} setUpdateNewContacts={setUpdateNewContacts} remove={handleContactRemove} id={id} setIsUpdate={setIsUpdate} isRemove={isRemove} setIsRemove={setIsRemove} sureRemove={sureRemove} />
                     </Route>
                     <Route exact path='/add-contact'>
                         <AddContact getAllContact={getContact} onChange={handleOnchange} contacts={updateNewContacts} />
