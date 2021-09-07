@@ -1,19 +1,24 @@
 {
   "contact": [
     {
+      "name": "Chika adelia saputri",
+      "email": "adelia@gmail.com",
+      "id": 1630993354745
+    },
+    {
       "name": "Alfin Studio",
       "email": "alfinrafi2@gmail.com",
-      "id": 1630451259599
+      "id": 1630993380099
     },
     {
-      "name": "adelia putri amalia",
-      "email": "adelia@gmail.com",
-      "id": 1630504607109
+      "name": "Joko saputra",
+      "email": "joko@gmail.com",
+      "id": 1630993449357
     },
     {
-      "name": "Malika putri",
-      "email": "malika@gmail.com",
-      "id": 1630505987104
+      "name": "Samuel simanjutak",
+      "email": "samuel@gmail.com",
+      "id": 1630993477481
     }
   ]
 }
